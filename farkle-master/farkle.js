@@ -12,8 +12,7 @@ class Farkle {
     }
 
     addPlayer(playerName){
-        var newPlayer = new Player();
-        newPlayer.name = playerName;
+        var newPlayer = new Player(playerName);
         this.players.push(newPlayer);
 
         
@@ -24,7 +23,7 @@ class Farkle {
         document.querySelector('#board').innerHTML='';
         
         this.players.forEach((player)=>{
-            this.drawPlayer(player.name);
+            this.drawPlayer(player);
         });
         // loop over the players
         // display them on the screen
@@ -34,7 +33,7 @@ class Farkle {
 
     drawPlayer(player){
         var p = document.createElement('div');
-        p.innerText = player;
+        p.innerText = player.name;
         document.querySelector('#board').appendChild(p);
     }
     
