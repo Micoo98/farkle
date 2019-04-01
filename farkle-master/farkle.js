@@ -34,7 +34,7 @@ class Farkle {
 
     drawPlayer(player){
         var p = document.createElement('div');
-        p.innerText = "Score: " player.name;
+        p.innerText = "Score: " + player.name;
         document.querySelector('#board').appendChild(p);
     }
     
