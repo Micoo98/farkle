@@ -24,6 +24,7 @@ class Farkle {
         
         this.players.forEach((player)=>{
             this.drawPlayer(player);
+            this.drawScore(player);
         });
         // loop over the players
         // display them on the screen
@@ -33,8 +34,12 @@ class Farkle {
 
     drawPlayer(player){
         var p = document.createElement('div');
-        p.innerText = player.name;
+        p.innerText = "Score: " player.name;
         document.querySelector('#board').appendChild(p);
     }
     
+    drawScore(playerScore){
+        var s = document.createElement('div');
+        s.innerText = player.totalScore;
+        document.querySelector('#board').appendChild(s);   
 }
